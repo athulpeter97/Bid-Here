@@ -1,10 +1,15 @@
 import 'package:bid_here/Routes/routes.dart';
-import 'package:bid_here/Screens/Buyer/screen_buyer.dart';
-import 'package:bid_here/Screens/Seller/screen_seller.dart';
-import 'package:bid_here/Screens/home/Drawer%20Pages/profile.dart';
-import 'package:bid_here/Screens/home/screen_home.dart';
+
+import 'package:bid_here/Screens/screen_add_products.dart';
+import 'package:bid_here/Screens/screen_buyer.dart';
+import 'package:bid_here/Screens/screen_edit_product.dart';
+import 'package:bid_here/Screens/screen_my_products.dart';
+import 'package:bid_here/Screens/screen_seller.dart';
+import 'package:bid_here/Screens/screen_profile.dart';
+import 'package:bid_here/Screens/screen_home.dart';
 import 'package:bid_here/Screens/screen_login.dart';
 import 'package:bid_here/Screens/screen_signup.dart';
+import 'package:bid_here/Screens/screen_update_profile.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -25,14 +30,18 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.purple,
         // ignore: deprecated_member_use
       ),
-      home: const ScreenLogin(),
+      home: const ScreenHome(),
       routes: {
         loginRoute: (context) => const ScreenLogin(),
         registerRoute: (context) => const ScreenSignUp(),
-        homeRoute: (context) =>const  ScreenHome(),
+        homeRoute: (context) => const ScreenHome(),
         buyerRoute: (context) => const ScreenBuyer(),
         sellerRoute: (context) => const ScreenSeller(),
         profileRoute: (context) => const ScreenProfile(),
+        editProfileRoute: (context) => const ScreenUpdateProfile(),
+        addProductRoute: (context) => ScreenAddProcucts(),
+        myProductRoute: (context) =>  const ScreenMyPRoducts(),
+        
       },
     );
   }

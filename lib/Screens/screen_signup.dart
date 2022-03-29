@@ -117,7 +117,9 @@ class _ScreenSignUpState extends State<ScreenSignUp> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(
+                  height: 20,
+                ),
 
                 //last name field
 

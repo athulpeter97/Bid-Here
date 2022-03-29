@@ -25,7 +25,7 @@ class _BidHereDrawerState extends State<BidHereDrawer> {
           value.data(),
         );
         setState(() {});
-      },
+      },  
     );
     super.initState();
   }
@@ -33,6 +33,12 @@ class _BidHereDrawerState extends State<BidHereDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(40),
+          bottomRight: Radius.circular(40),
+        ),
+      ),
       child: Column(
         children: [
           Container(
@@ -88,9 +94,7 @@ class _BidHereDrawerState extends State<BidHereDrawer> {
                   Text(
                     "${loggedInUser.email}",
                     style: const TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w400
-                    ),
+                        color: Colors.white, fontWeight: FontWeight.w400),
                   ),
                   const SizedBox(
                     height: 10,
